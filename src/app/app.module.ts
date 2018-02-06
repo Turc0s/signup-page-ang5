@@ -11,9 +11,10 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ChangeinfoComponent } from './main/changeinfo/changeinfo.component';
 import { ChangepassComponent } from './main/changeinfo/changepass/changepass.component';
 import { Routes, RouterModule } from "@angular/router";
+import { HelloPageComponent } from './hello-page/hello-page.component';
 
 const appRoutes: Routes = [
-  { path: "", component: LoginpageComponent },
+  { path: "", component: HelloPageComponent },
   { path: "loginpage", component: LoginpageComponent },
   { path: "main", component: MainComponent },
   { path: "signup", component: SignupPageComponent }
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
     LoginpageComponent,
     ChangeinfoComponent,
     ChangepassComponent,
+    HelloPageComponent,
   ],
   imports: [
     BrowserModule,
