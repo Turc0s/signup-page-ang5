@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
@@ -11,7 +10,14 @@ import { ShowinfoComponent } from './main/showinfo/showinfo.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ChangeinfoComponent } from './main/changeinfo/changeinfo.component';
 import { ChangepassComponent } from './main/changeinfo/changepass/changepass.component';
+import { Routes, RouterModule } from "@angular/router";
 
+const appRoutes: Routes = [
+  { path: "", component: LoginpageComponent },
+  { path: "loginpage", component: LoginpageComponent },
+  { path: "main", component: MainComponent },
+  { path: "signup", component: SignupPageComponent }
+];
 
 @NgModule({
   declarations: [
@@ -26,7 +32,8 @@ import { ChangepassComponent } from './main/changeinfo/changepass/changepass.com
     ChangepassComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
